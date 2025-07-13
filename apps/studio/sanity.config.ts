@@ -3,6 +3,7 @@ import {structureTool} from 'sanity/structure'
 import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemaTypes'
 import {structure} from './structure'
+import {defaultDocumentNode} from './structure/defaultDocumentNode'
 
 
 export default defineConfig({
@@ -12,7 +13,7 @@ export default defineConfig({
   projectId: 'bfg48551',
   dataset: 'production',
 
-  plugins: [structureTool({structure}), visionTool()],
+  plugins: [structureTool({structure, defaultDocumentNode}), visionTool()],
 
   schema: {
     types: schemaTypes,
