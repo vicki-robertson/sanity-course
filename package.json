@@ -4,11 +4,14 @@
   "version": "1.0.0",
   "description": "Day One Content Operations",
   "scripts": {
-    "dev": "pnpm run --parallel dev",
-    "build": "pnpm run --parallel build"
+    "dev": "pnpm -r --parallel dev",
+    "build": "pnpm -r --parallel build"
   },
   "engines": {
     "node": ">=20.0.0",
     "pnpm": ">=10.0.0"
+  },
+  "dependencies": {
+    "@sanity/image-url": "^1.1.0"
   }
 }
